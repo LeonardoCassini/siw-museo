@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(home)"></head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<nav>
+		<ul>
+			<li><a th:href="@{/admin/home}">Home</a></li>
+			<li><a th:href="@{/admin/modifica}">Modifica</a></li>
+			<li><a th:href="@{/admin/inserisci}">Inserisci</a></li>
+			<li class="posDestra"><a th:href="@{/logout}">Logout</a></li>
+		</ul>
+	</nav>
+	<div>
+	<strong>Benvenuto nella zona dedicata agli admin</strong>
+	</div>
+</body>
+</html>

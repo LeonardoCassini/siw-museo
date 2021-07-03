@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(home)"></head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<nav>
+		<ul>
+			<li><a th:href="@{/admin/home}">Home</a></li>
+			<li><a th:href="@{/modifica}">Modifica</a></li>
+			<li><a th:href="@{/inserisci}">Inserisci</a></li>
+			<li class="posDestra"><a th:href="@{/logout}">Logout</a></li>
+		</ul>
+	</nav>
+	<div class="centrale">
+	<strong>Cosa vuoi modificare?</strong>
+	<ul>
+	<li><a th:href="@{/formOpera}">Opera</a></li>
+	<li><a th:href="@{formArtista}">Artista</a></li>
+	<li><a th:href="@{formCollezione}">Collezione</a></li>
+	<li><a th:href="@{formCuratore}">Curatore</a></li>
+	</ul>
+	</div>
+</body>
+</html>

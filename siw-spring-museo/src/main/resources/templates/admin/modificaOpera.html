@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base.html :: headerfiles(home)"></head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	<header th:replace="fragments/base.html :: intestazione"></header>
+	<nav>
+		<ul>
+			<li><a th:href="@{/admin/home}">Home</a></li>
+			<li><a th:href="@{/modifica}">Modifica</a></li>
+			<li><a th:href="@{/inserisci}">Inserisci</a></li>
+			<li class="posDestra"><a th:href="@{/logout}">Logout</a></li>
+		</ul>
+	</nav>
+
+	  <div>
+		<ul>
+			<li th:text=|${opera.titolo}|></li>
+			<li th:text=|${opera.descrizione}|></li>
+			<li th:if="|${opera.artista.cognome}|"
+				th:text="|${opera.artista.nome}   ${opera.artista.cognome}|">
+				nome e cognome
+				<div th:unless="|${opera.artista.cognome}|"
+					th:text="|${opera.artista.nome}|">></div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
